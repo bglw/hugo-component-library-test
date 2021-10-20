@@ -1,0 +1,6 @@
+<div class="c-content c-content--{{ .type }}">
+    {{ if eq .type "note" }}
+        <p>NOTE</p>
+    {{ end }}
+    {{ .content_html | safeHTML }}
+</div>

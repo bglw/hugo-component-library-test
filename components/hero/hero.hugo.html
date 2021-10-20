@@ -1,0 +1,15 @@
+<div class="c-title">
+    {{ range .tags }}
+        <p>{{ .text }}</p>
+        <!-- {% bookshop_include "tag" bind: tag %} -->
+    {{ end }}
+    <h1 class="c-title__title">
+        {{ .title }}
+    </h1>
+    <!-- {% if content_html %}
+        {% bookshop "content" content_html: content_html %}
+    {% endif %} -->
+	{{ $src := readDir "." }}
+	<h1>: {{ range $src }}{{ .Name }} {{ end }}</h1>
+    <h1>- {{ . }} -</h1>
+</div>
